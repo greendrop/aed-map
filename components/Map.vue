@@ -105,6 +105,9 @@ export default {
   width: 100%;
   height: 100%;
 }
+.leaflet-container {
+  z-index: 0;
+}
 .icon-current {
   width: 100%;
   height: 100%;
