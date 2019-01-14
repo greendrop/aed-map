@@ -1,22 +1,55 @@
 # aed-map
 
-> My sublime Nuxt.js project
+WAEDオープンデータAPIとNuxt.js、Leafletを使用したAEDマップです。
 
-## Build Setup
+## 使用言語・ライブラリ
 
-``` bash
-# install dependencies
+- AEDオープンデータAPI http://hatsunejournal.jp/w8/AEDOpendata/
+- Nuxt.js(Vue.js)
+- Vuetify
+- vue2-leaflet
+
+## 環境構築アプリケーション
+
+- Docker
+- Docker Compose
+- direnv
+- git
+
+## セットアップ
+
+```shell
+$ git clone git@github.com:greendrop/aed-map.git
+$ cd aed-map
+$ vi .envrc
+$ direnv allow
+$ cp .env.example .env
+$ docker-compose pull
+$ docker-compose build
+$ docker-compose run --rm front bash
 $ yarn install
-
-# serve with hot reload at localhost:3000
-$ yarn run dev
-
-# build for production and launch server
-$ yarn run build
-$ yarn start
-
-# generate static project
-$ yarn run generate
+$ exit
+$ docker-compose up
 ```
 
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+### .envrc
+
+```
+export USER_ID=`id -u`
+export GROUP_ID=`id -g`
+```
+
+### .env
+
+APIのURL
+以下URLにはレスポンスヘッダーに`Access-Control-Allow-Origin`が設定されていないため、localhost以外ではAPIを中継してレスポンスヘッダーを設定するものを用意
+
+Netlify Lambdaの使用例 https://github.com/greendrop/netlify-lambda-aed
+
+```
+API_URL=https://aed.azure-mobile.net/api/AEDSearch
+```
+
+## ブラウザで表示
+
+http://localhost:3000
