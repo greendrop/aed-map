@@ -7,7 +7,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: pkg.name,
+    title: 'AEDマップ',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -44,7 +44,8 @@ module.exports = {
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    '@nuxtjs/pwa'
   ],
   /*
   ** Axios module configuration
@@ -71,5 +72,15 @@ module.exports = {
         })
       }
     }
+  },
+  manifest: {
+    name: "AEDマップ",
+    short_name: "AEDマップ",
+    author: "AEDマップ",
+    description: "AEDマップ",
+    lang: "ja"
+  },
+  workbox: {
+    dev: true
   }
 }
