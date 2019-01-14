@@ -41,7 +41,7 @@ export GROUP_ID=`id -g`
 
 ### .env
 
-APIのURL
+APIのURL  
 以下URLにはレスポンスヘッダーに`Access-Control-Allow-Origin`が設定されていないため、localhost以外ではAPIを中継してレスポンスヘッダーを設定するものを用意
 
 Netlify Lambdaの使用例 https://github.com/greendrop/netlify-lambda-aed
