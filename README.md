@@ -1,6 +1,6 @@
 # aed-map
 
-WAEDオープンデータAPIとNuxt.js、Leafletを使用したAEDマップです。
+AEDオープンデータAPIとNuxt.js、Leafletを使用したAEDマップです。
 
 ## 使用言語・ライブラリ
 
