@@ -48,7 +48,7 @@ export default {
   data() {
     return {
       clipped: true,
-      drawer: false,
+      drawer: null,
       fixed: false,
       items: [{ icon: 'map', title: 'AEDマップ', to: '/' }],
       miniVariant: false,
